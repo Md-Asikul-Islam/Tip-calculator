@@ -59,3 +59,13 @@ input[type="range"] {
   border: 1px solid #ccc;
   border-radius: 0.5rem;
 }
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.5rem;
+    background: #007bff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
