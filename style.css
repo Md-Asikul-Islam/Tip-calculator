@@ -92,3 +92,19 @@ input[type="range"] {
   button.generate-bill:hover {
     background-color: #0056b3;
   }
+
+
+  /* Result Wrapper */
+.result-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: #e9ecef;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .result-wrapper label {
+    font-size: 1rem;
+    font-weight: bold;
+  }
