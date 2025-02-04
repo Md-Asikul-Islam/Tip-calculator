@@ -69,3 +69,9 @@ input[type="range"] {
     cursor: pointer;
   }
   
+
+  .discount-value, .tip-value, .no-of-customers-value {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #007bff;
+  }
