@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  font-family: "Poppins", serif;
-  background: #F0F8FF;
+  font-family: "Poppins", sans-serif;
+  background: #f0f8ff;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -23,98 +23,157 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
 
 /* Form Wrapper */
 .form-wrapper {
-    width: clamp(10rem, 90%, 40rem);
-    background: #fff;
-    padding: 2rem;
-    margin: 0 auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: clamp(10rem, 90%, 60rem);
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-input-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  label {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 30rem;
+  margin-bottom: 1.5rem;
+}
 
-  input[type="number"],
+label {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+input[type="number"],
 input[type="range"] {
   width: 100%;
-  max-width: 20rem;
   padding: 0.75rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0.5rem;
+  background: #8a2be2;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #8a2be2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #8a2be2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.discount-value,
+.tip-value,
+.no-of-customers-value {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-top: 0.5rem;
+}
+
+button.generate-bill {
+  width: 100%;
+  max-width: 20rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+
+button.generate-bill:hover {
+  background-color: #0056b3;
+}
+
+/* Result Wrapper */
+.result-wrapper {
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9ecef;
+  padding: 1.5rem;
+  margin-top: 2rem;
   border-radius: 0.5rem;
 }
 
-input[type="range"] {
-    -webkit-appearance: none;
-    appearance: none;
-    height: 0.5rem;
-    background: #007bff;
-    border-radius: 0.5rem;
-    cursor: pointer;
-  }
-  
+.result-wrapper label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
 
-  .discount-value, .tip-value, .no-of-customers-value {
-    font-weight: bold;
+.result-wrapper span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  label {
     font-size: 1.2rem;
-    color: #007bff;
+  }
+
+  input[type="number"],
+  input[type="range"] {
+    font-size: 1.2rem;
   }
 
   button.generate-bill {
-    width: 100%;
-    max-width: 20rem;
+    font-size: 1.4rem;
+  }
+
+  .result-wrapper {
     padding: 1rem;
-    font-size: 1rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  button.generate-bill:hover {
-    background-color: #0056b3;
   }
 
-
-  /* Result Wrapper */
-.result-wrapper {
-    display: flex;
-    justify-content: space-between;
-    background: #e9ecef;
-    padding: 1rem;
-    margin-top: 1rem;
-    border-radius: 0.5rem;
+  .result-wrapper label,
+  .result-wrapper span {
+    font-size: 1.2rem;
   }
-  
-  .result-wrapper label {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-
-  @media (max-width: 600px) {
-    .form-wrapper {
-      padding: 1.5rem;
-    }
-    h1 {
-      font-size: 1.5rem;
-    }
-  }
-  
+}
