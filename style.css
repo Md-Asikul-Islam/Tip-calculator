@@ -75,3 +75,20 @@ input[type="range"] {
     font-size: 1.2rem;
     color: #007bff;
   }
+
+  button.generate-bill {
+    width: 100%;
+    max-width: 20rem;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button.generate-bill:hover {
+    background-color: #0056b3;
+  }
