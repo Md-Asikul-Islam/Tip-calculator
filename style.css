@@ -108,3 +108,13 @@ input[type="range"] {
     font-size: 1rem;
     font-weight: bold;
   }
+
+  @media (max-width: 600px) {
+    .form-wrapper {
+      padding: 1.5rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
