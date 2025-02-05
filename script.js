@@ -20,5 +20,12 @@ function calculateBill() {
       noOfCustomers.value
     );
 
+    const billAmountAfterDiscountPercentage =
+    billAmount.value - (discountPercentage.value * billAmount.value) / 100;
+
+  const getTipAmount =
+    billAmountAfterDiscountPercentage * (tipsPercentage.value / 100);
+  const totalBill = billAmountAfterDiscountPercentage + getTipAmount;
+  const eachCustomerToPayAmount = totalBill / noOfCustomers.value;
 
 }
