@@ -12,3 +12,13 @@ const totalNoOfCustomersValue = document.querySelector(".no-of-customers-value")
 const eachCustomerToPay = document.querySelector('.each-customer-to-pay');
 
 
+function calculateBill() {
+    console.log(
+      billAmount.value,
+      tipsPercentage.value,
+      discountPercentage.value,
+      noOfCustomers.value
+    );
+
+
+}
